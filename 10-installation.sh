@@ -9,7 +9,13 @@ then
 else
     echo "Your are super user."
 fi
+
 dnf install mysql -y
 
+if [ $? -ne 0 ]
+then 
+    echo "mysql installed successfully."
+    exit 1
+fi
 
 echo "this scrit proceding?"
