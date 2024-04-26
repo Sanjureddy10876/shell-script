@@ -14,8 +14,11 @@ dnf install mysql -y
 
 if [ $? -ne 0 ]
 then 
-    echo "mysql installed successfully."
+    echo "installation of mysql failure"
     exit 1
 fi
+
+dnf install mysql -y
+
 
 echo "this scrit proceding?"
