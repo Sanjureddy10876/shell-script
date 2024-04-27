@@ -30,5 +30,7 @@ do
     if [ $? -eq 0 ]
     then
         echo "Package $i is already installed."
+    else 
+        echo "Package $i is not installed...Need to install"
     fi
 done
