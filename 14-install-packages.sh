@@ -37,7 +37,7 @@ do
     dnf list installed $i &>>$LOGFILE
     if [ $? -eq 0 ]
     then
-        echo "Package $i is already installed...$Y SKIPPING $N"
+        echo -e "Package $i is already installed...$Y SKIPPING $N"
     else 
         echo "Package $i is not installed...Need to install"
     fi
