@@ -11,7 +11,6 @@ B="\e[34m"
 P="\e[35m"
 C="\e[36m"
 W="\e[37m"
-N="\e[33m"
 
 VALIDATE(){
     if [ $1 -ne 0 ]
