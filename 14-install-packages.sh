@@ -16,10 +16,10 @@ N='\033[0m'
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo "$2....FAILED"
+        echo "$2....$R FAILED $N"
         exit 1 
     else 
-        echo "$2....SUCCESS"
+        echo "$2....$G SUCCESS $N"
     fi
 }
 
@@ -39,6 +39,8 @@ do
     then
         echo -e "Package $i is already installed...$Y SKIPPING $N"
     else 
+        dnf install $i -y &>>$LOGFILE
+        VALIDATE $? "Installing $i"
         echo "Package $i is not installed...Need to install"
     fi
 done
