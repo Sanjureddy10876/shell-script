@@ -10,9 +10,7 @@ else
     echo "Your are super user."
 fi
 
-dnf install mysql -y
-
-dnf install git -y
+dnf install myysssql -y
 
 dnf install git -y
 
