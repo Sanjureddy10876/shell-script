@@ -11,7 +11,7 @@ B="\e[34m"
 P="\e[35m"
 C="\e[36m"
 W="\e[37m"
-N='\033[0m'
+N="\033[0m"
 
 VALIDATE(){
     if [ $1 -ne 0 ]
@@ -26,7 +26,7 @@ VALIDATE(){
 if [ $USERID -ne 0 ]
 then 
     echo "Please run this script with root access."
-    exit 1
+    exit 1 #manuvally exit if error comes
 else
     echo "You are the super user."
 fi
